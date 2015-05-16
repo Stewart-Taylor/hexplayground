@@ -1,6 +1,3 @@
-
-
-
 class World
 
     constructor: (scene) ->
@@ -19,7 +16,6 @@ class World
 
     createWorld: () ->
 
-        # grid = worldGenerator.generateWorld()
         @tiles = @createArray(@WORLD_WIDTH, @WORLD_HEIGHT)
 
         x = 0
@@ -36,26 +32,6 @@ class World
 
         @count = 0
 
-        # console.log("233sdsd")
-        # tilesD = @tiles
-        # setInterval (@tiles) ->
-        #     for tile in tilesD
-        #         tile.update()
-        #     # a = 0
-        #     # while a < @WORLD_WIDTH
-        #     #     b = 0
-        #     #     while b < @WORLD_HEIGHT
-        #     #         console.log("sdsd")
-        #     #         @tiles[a][b].update()
-        #     #         b++
-        #     #     a++
-        # , 100
-
-        # for tile in @tiles
-        #     newTile = new Tile(this, gridTile.x, gridTile.y, gridTile.value, gridTile.type)
-        #     @tiles[gridTile.x][gridTile.y] = newTile
-        #     @tilesPF.push newTile
-
 
 
     createArray: (length) ->
@@ -66,7 +42,6 @@ class World
             while i--
                 arr[length - 1 - i] = @createArray.apply(this, args)
         return arr
-
 
 
 

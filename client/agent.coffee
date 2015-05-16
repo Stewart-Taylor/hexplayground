@@ -22,21 +22,6 @@ class Agent
         @town.world.scene.add @cube
 
 
-
-        #check for closest attackable object
-
-
-
-
-
-
     update: () ->
       #
-
-
-
-
-
-
-
 

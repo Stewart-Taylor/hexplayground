@@ -22,13 +22,11 @@ app.configure ->
     app.use express.cookieParser()
     app.use flash()
     app.use express.bodyParser()
-    app.use express.session(secret: "splicerSecret")
+    app.use express.session(secret: "secret")
     app.use app.router
     app.use express.logger("dev")
-    app.use "/output", express.static("../output")
     app.use "/", express.static("../public")
     app.use "/tmp", express.static("../tmp")
-    app.use "/levels", express.static("../levels")
 
 
 app.set "view engine", "ejs"

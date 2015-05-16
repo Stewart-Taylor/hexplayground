@@ -1,5 +1,3 @@
-
-
 class GameManager
 
     cameraManager = null
@@ -63,7 +61,6 @@ class GameManager
         timeTaken = Date.now() - timestart
 
         # console.log(timeD , "ms")
-
 
 
 

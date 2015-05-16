@@ -1,18 +1,12 @@
 class Tile
 
-    constructor: (world, x, y, value, type) ->
+    constructor: (world, x, y) ->
 
         @x = x
         @y = y
-        @value = value
         @world = world
-        @hasFarm = false
-        @hasBuilding = false
 
         @tileColor = new THREE.Color( 0, value, 0 )
-
-        @hasOwner = false
-        @owner = null
 
         TILE_SIZE = 10
 
@@ -21,7 +15,6 @@ class Tile
 
         if type == 1
             @landMaterial = new (THREE.MeshLambertMaterial)(color: @tileColor)
-            #cube = new (THREE.Mesh)(new (THREE.BoxGeometry)(TILE_WIDTH - 1, 1, TILE_HEIGHT - 1), landMaterial)
             geometry = new THREE.CylinderGeometry(TILE_SIZE,TILE_SIZE,2,6)
             @cube  = new THREE.Mesh( geometry, @landMaterial )
 

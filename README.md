@@ -1,1 +1,1 @@
-#Hexgame awesome fun
+#Hexgrid game
